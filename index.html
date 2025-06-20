@@ -250,22 +250,25 @@
 
       .header-container {
         position: relative;
-        right: 65px; /* Adjusted to center the header */
-        top: 5px; /* Adjusted to center the header */
+        right: clamp(20px, 8vw, 65px); /* Responsive positioning */
+        top: 5px;
         display: flex;
         align-items: center;
-        background-color: var(--header-bg); /* Uses the header-bg variable */
-        padding: 1rem 2rem;
-        border-radius: 45px 0 0 45px; /* Only top-left and bottom-left corners rounded */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for the rectangle */
+        background-color: var(--header-bg);
+        padding: clamp(0.75rem, 2.5vw, 1rem) clamp(1rem, 4vw, 2rem);
+        border-radius: clamp(25px, 5vw, 45px) 0 0 clamp(25px, 5vw, 45px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: clamp(80px, 12vw, 120px);
+        height: clamp(80px, 12vw, 120px);
         border-radius: 50%;
         object-fit: cover;
-        margin-right: 1rem;
+        margin-right: clamp(0.75rem, 2vw, 1rem);
+        flex-shrink: 0;
       }
 
       .heading-content {

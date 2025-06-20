@@ -1,0 +1,22 @@
+{
+  "name": "kedar-resume-portfolio",
+  "version": "1.0.0",
+  "description": "Static HTML resume/portfolio website for Kedar P Navsariwala",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -s . -l 3000",
+    "build": "echo 'Static site - no build step required'",
+    "start": "npx serve -s . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": [
+    "resume",
+    "portfolio",
+    "static",
+    "html"
+  ],
+  "author": "Kedar P Navsariwala",
+  "license": "MIT"
+}

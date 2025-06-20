@@ -343,18 +343,18 @@
 
       /* Social buttons styling */
       .social-buttons {
-        position: fixed; /* Change from absolute to fixed */
-        top: 20px; /* Position near the top of the screen */
-        right: 20px; /* Position to the right of the screen */
+        position: fixed;
+        top: clamp(15px, 3vw, 20px);
+        right: clamp(15px, 3vw, 20px);
         display: flex;
-        flex-direction: column; /* Align buttons vertically */
-        gap: 10px; /* Space between buttons */
-        z-index: 100; /* Ensure they stay above other elements */
+        flex-direction: column;
+        gap: clamp(8px, 1.5vw, 10px);
+        z-index: 100;
       }
 
       .social-buttons a {
-        width: 40px;
-        height: 40px;
+        width: clamp(44px, 6vw, 48px); /* Ensure minimum touch target size */
+        height: clamp(44px, 6vw, 48px);
         background-color: var(--nav-bg);
         border-radius: 50%;
         display: flex;
@@ -371,8 +371,8 @@
       }
 
       .social-buttons svg {
-        width: 20px;
-        height: 20px;
+        width: clamp(18px, 3vw, 22px);
+        height: clamp(18px, 3vw, 22px);
         fill: var(--text-color);
       }
 

@@ -67,16 +67,18 @@
 
       /* Container styling */
       .container {
-        max-width: 900px;
+        max-width: min(900px, 95vw);
         margin: auto;
         background-color: var(--container-bg);
-        padding: 2rem;
-        border-radius: 60px;
+        padding: clamp(1rem, 3vw, 2rem);
+        border-radius: clamp(20px, 6vw, 60px);
         transition:
           background-color 0.5s,
           box-shadow 0.5s;
         box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* White glow for dark mode */
         position: relative; /* Add this to enable absolute positioning of child elements */
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .light-mode .container {

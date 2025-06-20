@@ -229,15 +229,22 @@
       /* Gallery styling */
       .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(clamp(150px, 25vw, 200px), 1fr)
+        );
+        gap: clamp(0.75rem, 2vw, 1rem);
+        margin-top: clamp(0.75rem, 2vw, 1rem);
       }
       .gallery img {
         width: 100%;
-        border-radius: 8px;
+        border-radius: clamp(6px, 1vw, 8px);
         object-fit: cover;
-        height: 150px;
+        height: clamp(120px, 20vw, 150px);
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.02);
       }
 
       /* Header with profile photo */
